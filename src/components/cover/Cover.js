@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Cover() {
 
-    const [ concept, setConcept ] = useState([]);
+    
 
     var array = [
         'Bitcoin',
@@ -13,16 +13,19 @@ export default function Cover() {
         'LiteCoin'
     ];
 
-    const randomConcept = () => (
-        array[Math.floor(Math.random)*array.length]
-    )
+    const [length, setLength] = useState(0);
 
-    setConcept(randomConcept)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setLength(length => (length === 5 ? 0 : length + 1));
+        }, 500)
+
+    }, [])
 
     return (
         <div className="cover-container">
 
-            {concept}
+            {array[length]}
             
         </div>
     )
