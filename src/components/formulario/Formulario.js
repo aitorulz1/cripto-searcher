@@ -14,6 +14,8 @@ import axios from 'axios';
         
     ]
 
+    const [ error, guardarError ] = useState(false)
+
     const [ listadocripto, guardarListadoCripto ] = useState([]);
 
     const [ moneda, UseMoneda ] = useMoneda('Elije tu moneda', '', MONEDAS);
@@ -26,20 +28,43 @@ import axios from 'axios';
             guardarListadoCripto(resultado.data.Data)
         } 
         consultarApi()
-    },[])
+    },[]);
+
+
+    const turnOff = () => {
+        guardarError(false)
+    }
+
+
+    // Cuando el usuario hace submit
+    const cotizarMoneda = e => {
+        e.preventDefault();
+
+        if(moneda === '' || criptomoneda === '') {
+            guardarError(true);
+            return;
+        }
+
+        guardarError(false);
+    }
 
     return (
-        <form>
+        <form
+            onSubmit={cotizarMoneda}
+        >
+
+        {error ? <div className="">Debe selecionar ambos valores</div> : null}
 
             <UseMoneda />
 
             <UseCriptomoneda />
 
-            <input
+            <button
                 type='submit'
                 className='button'
                 value= 'Calcular'
-            />
+                onclick={setTimeout(turnOff, 3500)}
+            >Calcular</button>
         </form>
     )
 }
