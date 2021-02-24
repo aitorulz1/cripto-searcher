@@ -4,13 +4,13 @@ import useMoneda from '../hooks/useMoneda';
 import useCriptomoneda from '../hooks/useCriptomoneda';
 import axios from 'axios';
 
-    const Formulario = () => {
+    const Formulario = ({guardarTipoMoneda, guardarTipoCripto}) => {
 
     const MONEDAS = [
-        {código: 'USD', nombre: 'Dólar de EEUU'},
-        {código: 'MXN', nombre: 'Peso Mejicano'},
-        {código: 'EUR', nombre: 'Euro'},
-        {código: 'GBP', nombre: 'Libra Esterlina'}
+        {codigo: 'USD', nombre: 'Dólar de EEUU'},
+        {codigo: 'MXN', nombre: 'Peso Mejicano'},
+        {codigo: 'EUR', nombre: 'Euro'},
+        {codigo: 'GBP', nombre: 'Libra Esterlina'}
         
     ]
 
@@ -46,6 +46,9 @@ import axios from 'axios';
         }
 
         guardarError(false);
+
+        guardarTipoMoneda(moneda);
+        guardarTipoCripto(criptomoneda);
     }
 
     return (
