@@ -18,6 +18,8 @@ function App() {
 
   const [cargando, guardarCargando] = useState(false);
 
+  const [verpagina, guardarVerPagina] = useState(false)
+
   useEffect(() => {
 
     // evitamos la ejución la primera vez
@@ -50,16 +52,35 @@ function App() {
 
   return (
     <div>
-      
-        <Header />
-        <Cover />
-        <Formulario 
-          guardarTipoMoneda={guardarTipoMoneda}
-          guardarTipoCripto={guardarTipoCripto}
-          guardarCargando={guardarCargando}
-        />
+        {!verpagina
+        ?
+        (
+          <Cover 
+          
+          guardarVerPagina={guardarVerPagina}
+        
 
-        {componente}
+        />
+        )
+        :
+        (
+          <div>
+
+            <Header />
+            
+            <Formulario 
+              guardarTipoMoneda={guardarTipoMoneda}
+              guardarTipoCripto={guardarTipoCripto}
+              guardarCargando={guardarCargando}
+            />
+
+            {componente}
+          
+          </div>)
+        }
+        
+
+        
 
 
     </div>

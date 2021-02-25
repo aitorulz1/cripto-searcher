@@ -1,0 +1,84 @@
+.cover-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #293137 0%,  #14181b 100%);
+}
+
+.cover-content {
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1000px;
+    padding: 5% 0%;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo-container img {
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.title {
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cripto-types-container {
+    position: relative;
+    width: 100%;
+    padding: 2.5% 0% 1% 0%;
+}
+
+.cripto-types-intro {
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 2.5% 0%;
+}
+
+.cripto-types-rabdom {
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.cripto-types-after {
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    width: 80%;
+    padding: 2.5% 0%;
+    line-height: 2;
+}
+
+
+.cripto-button-container{    
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 2.5% 0%;
+}
+
+.cripto-button-container button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    padding: 10px 10%;
+    color: #151a1d;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
