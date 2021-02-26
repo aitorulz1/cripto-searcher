@@ -1,5 +1,5 @@
 .header-container {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     display: table;
@@ -7,6 +7,5 @@
 }
 
 .header-container img {
-    width: 200px;
-
+    width: 150px;
 }

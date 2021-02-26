@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+.result-container {
+  text-align: center;
+  padding: 5% 0%;
+  display: inline-block;
+  width: 100%;
+}
+
+.result-container p {
+  background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

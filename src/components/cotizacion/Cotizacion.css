@@ -1,0 +1,9 @@
+.resultado li{
+    list-style: none;
+    background: linear-gradient(to right, #fce1a5 0%, #f4b936 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: 700;  
+}
+

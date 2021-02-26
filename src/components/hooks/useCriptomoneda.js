@@ -7,7 +7,7 @@ import React, { Fragment, useState } from 'react';
     const Seleccionar = () => (
 
         <Fragment>
-            <label>{label}</label>
+            <label className='label-title'>{label}</label>
             <select
                 onChange = { e => actualizarState(e.target.value) }
                 value = {state}

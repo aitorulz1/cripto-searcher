@@ -31,7 +31,7 @@ function App() {
       const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cripto}&tsyms=${moneda}`;
   
       const resultado = await axios.get(url);
-
+      console.log(resultado)
       // mostrar el Spinner
       guardarCargando(true);
 
@@ -48,35 +48,51 @@ function App() {
 
   }, [moneda, cripto])
 
-  const componente = (cargando) ? <Spinner /> : <Cotizacion resultado={resultado} />
 
   return (
     <div>
         {!verpagina
         ?
-        (
-          <Cover 
-          
-          guardarVerPagina={guardarVerPagina}
-        
-
-        />
-        )
-        :
-        (
-          <div>
-
-            <Header />
+          (
+            <Cover 
             
-            <Formulario 
-              guardarTipoMoneda={guardarTipoMoneda}
-              guardarTipoCripto={guardarTipoCripto}
-              guardarCargando={guardarCargando}
-            />
-
-            {componente}
+            guardarVerPagina={guardarVerPagina}
           
-          </div>)
+
+          />
+          )
+          :
+          (
+            <div className='cover-container'>
+
+              <div className="cover-content">
+
+              <Header />
+              
+              <Formulario 
+                guardarTipoMoneda={guardarTipoMoneda}
+                guardarTipoCripto={guardarTipoCripto}
+                guardarCargando={guardarCargando}
+              />
+
+                  <div className="result-container">
+
+                    {cargando ?
+
+                      <Spinner />
+                      :
+                      <Cotizacion
+                        resultado={resultado}
+                      />
+
+                    }
+
+                  </div>
+            
+              </div>
+
+            </div>
+          )
         }
         
 

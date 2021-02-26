@@ -1,5 +1,5 @@
 import React from 'react';
-import headerImg  from '../../assets/images/header-cripto.jpg';
+import headerImg  from '../../assets/images/cripto-logo.png';
 
 import './Header.css';
 

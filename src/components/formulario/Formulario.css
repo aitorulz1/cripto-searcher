@@ -1,0 +1,12 @@
+.error {
+    margin-top: 5%;
+    position: relative;
+    background: linear-gradient(to right, #fca5a5 0%, #f43636 100%);
+    padding: 10px 10%;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 200px;
+}

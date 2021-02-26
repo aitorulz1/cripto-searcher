@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import './Formulario.css';
+
 import useMoneda from '../hooks/useMoneda';
 import useCriptomoneda from '../hooks/useCriptomoneda';
 import axios from 'axios';
@@ -56,7 +58,7 @@ import axios from 'axios';
             onSubmit={cotizarMoneda}
         >
 
-        {error ? <div className="">Debe selecionar ambos valores</div> : null}
+        {error ? <div className="error">Debe selecionar ambos valores</div> : null}
 
             <UseMoneda />
 

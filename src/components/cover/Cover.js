@@ -8,11 +8,15 @@ export default function Cover({guardarVerPagina}) {
     
     var array = [
         'Bitcoin',
-        'Criptomonedas',
         'Ethereum',
-        'Ripple',
-        'Dash',
-        'LiteCoin'
+        'XRP',
+        'Binance Coin',
+        'Cardano',
+        'Tether',
+        'Polkadot',
+        'Chainlink',
+        'Uniswap',
+        'Stellar'
     ];
 
     const [length, setLength] = useState(0);
@@ -22,8 +26,8 @@ export default function Cover({guardarVerPagina}) {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setLength(length => (length === 5 ? 0 : length + 1));
+        setInterval(() => {
+            setLength(length => (length === 9 ? 0 : length + 1));
         }, 750)
 
     }, [])
