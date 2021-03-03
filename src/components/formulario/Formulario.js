@@ -6,7 +6,7 @@ import useMoneda from '../hooks/useMoneda';
 import useCriptomoneda from '../hooks/useCriptomoneda';
 import axios from 'axios';
 
-    const Formulario = ({guardarTipoMoneda, guardarTipoCripto}) => {
+    const Formulario = ({guardarTipoMoneda, guardarTipoCripto, guardarVerli}) => {
 
     const MONEDAS = [
         {codigo: 'USD', nombre: 'Dólar de EEUU'},
@@ -51,6 +51,8 @@ import axios from 'axios';
 
         guardarTipoMoneda(moneda);
         guardarTipoCripto(criptomoneda);
+
+        guardarVerli(true)
     }
 
     return (

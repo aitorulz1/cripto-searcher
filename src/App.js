@@ -20,6 +20,8 @@ function App() {
 
   const [verpagina, guardarVerPagina] = useState(false)
 
+  const [verli, guardarVerli] = useState(false)
+
   useEffect(() => {
 
     // evitamos la ejución la primera vez
@@ -73,6 +75,7 @@ function App() {
                 guardarTipoMoneda={guardarTipoMoneda}
                 guardarTipoCripto={guardarTipoCripto}
                 guardarCargando={guardarCargando}
+                guardarVerli= {guardarVerli}
               />
 
                   <div className="result-container">
@@ -83,6 +86,7 @@ function App() {
                       :
                       <Cotizacion
                         resultado={resultado}
+                        verli={verli}
                       />
 
                     }

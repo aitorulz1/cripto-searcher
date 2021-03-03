@@ -2,9 +2,10 @@ import React from 'react';
 
 import './Cotizacion.css';
 
-export default function Cotizacion({resultado}) {
+export default function Cotizacion({resultado, verli}) {
     return (
         <div className="resultado">
+        {verli ?
             <ul>
                 <li>Change 24h: {resultado.CHANGE24HOUR}</li>
                 <li>Change Day: {resultado.CHANGEDAY}</li>
@@ -15,7 +16,10 @@ export default function Cotizacion({resultado}) {
                 <br/>
                 <li>Price: {resultado.LOWDAY}</li>
                 <br/>
-            </ul>     
+            </ul> 
+            : null
+        }
+                
         </div>
     )
 }
