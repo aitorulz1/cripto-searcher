@@ -6,18 +6,35 @@ export default function Cotizacion({resultado, verli}) {
     return (
         <div className="resultado">
         {verli ?
-            <ul>
-                <li>Change 24h: {resultado.CHANGE24HOUR}</li>
-                <li>Change Day: {resultado.CHANGEDAY}</li>
-                <li>Change / Hour: {resultado.CHANGEHOUR}</li>
-                <br/>
-                <li>Max. Day: {resultado.HIGHDAY}</li>
-                <li>Min. Day: {resultado.LOWDAY}</li>
-                <br/>
-                <li>Price: {resultado.LOWDAY}</li>
-                <br/>
-            </ul> 
+
+            <div className="resultado-container">
+                <ul className="left">
+                    <li>Change 24h: </li>
+                    <li>Change Day: </li>
+                    <li>Change / Hour: </li>
+                    <br/>
+                    <li>Max. Day: </li>
+                    <li>Min. Day: </li>
+                    <br/>
+                    <li>Price: </li>
+                    <br/>
+                </ul> 
+                
+                <ul className="right">
+                    <li>{resultado.CHANGE24HOUR}</li>
+                    <li>{resultado.CHANGEDAY}</li>
+                    <li>{resultado.CHANGEHOUR}</li>
+                    <br/>
+                    <li>{resultado.HIGHDAY}</li>
+                    <li>{resultado.LOWDAY}</li>
+                    <br/>
+                    <li>{resultado.LOWDAY}</li>
+                    <br/>
+                </ul> 
+            </div>
+
             : null
+
         }
                 
         </div>
